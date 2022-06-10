@@ -2,7 +2,7 @@
 # Download DNA.fa
 wget https://raw.githubusercontent.com/HackBio-Internship/wale-home-tasks/main/DNA.fa
 
-# Count DNA sequence about from the title
+# Count DNA sequence apart from the title
 tail -n +2 DNA.fa | tr -d '\n' | wc -c
 # Count Number of A,T,G and C base in sequence
 echo -n "TGGGTTGATTCCACACCCCCGCCCGGCACCCGCGTCCGCGCCGTGGCCATCTACAAGCAGTCACAGCACA
@@ -10,6 +10,7 @@ TGACGGAGGTTGTGAGGCGCTGCCCCCACCATGAGCGCTGCTCAGATAGCGAT" | sed '/\(./)/\1\n/g' | s
 
 #Download miniconda and setup
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
 
 #Install software
 sudo apt update
