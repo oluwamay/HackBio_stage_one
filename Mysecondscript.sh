@@ -5,8 +5,7 @@ wget https://raw.githubusercontent.com/HackBio-Internship/wale-home-tasks/main/D
 # Count DNA sequence apart from the title
 tail -n +2 DNA.fa | tr -d '\n' | wc -c
 # Count Number of A,T,G and C base in sequence
-echo -n "TGGGTTGATTCCACACCCCCGCCCGGCACCCGCGTCCGCGCCGTGGCCATCTACAAGCAGTCACAGCACA
-TGACGGAGGTTGTGAGGCGCTGCCCCCACCATGAGCGCTGCTCAGATAGCGAT" | sed '/\(./)/\1\n/g' | sort | uniq -c
+grep -Eo 'A|C|G|T' DNA.fa | sort | uniq -c | awk '{print $2": "$1}'
 
 #Download miniconda and setup
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
